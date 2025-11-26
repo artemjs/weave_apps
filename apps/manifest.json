@@ -9,7 +9,11 @@
       "author": "WeaveOS",
       "category": "games",
       "size": "6 KB",
-      "githubPath": "clicker/main.swift"
+      "githubPath": "clicker/main.swift",
+      "permissions": {
+        "required": ["storage.local"],
+        "optional": []
+      }
     },
     {
       "id": "snake",
@@ -20,7 +24,11 @@
       "author": "WeaveOS",
       "category": "games",
       "size": "5 KB",
-      "githubPath": "snake/main.swift"
+      "githubPath": "snake/main.swift",
+      "permissions": {
+        "required": ["storage.local"],
+        "optional": []
+      }
     },
     {
       "id": "clock",
@@ -31,7 +39,11 @@
       "author": "WeaveOS",
       "category": "utilities",
       "size": "3 KB",
-      "githubPath": "clock/main.swift"
+      "githubPath": "clock/main.swift",
+      "permissions": {
+        "required": [],
+        "optional": ["notifications"]
+      }
     },
     {
       "id": "notes",
@@ -42,7 +54,11 @@
       "author": "WeaveOS",
       "category": "productivity",
       "size": "4 KB",
-      "githubPath": "notes/main.swift"
+      "githubPath": "notes/main.swift",
+      "permissions": {
+        "required": ["storage.local", "filesystem.write", "filesystem.home"],
+        "optional": ["clipboard.read", "clipboard.write"]
+      }
     },
     {
       "id": "youtube",
@@ -53,7 +69,11 @@
       "author": "Google",
       "category": "media",
       "size": "Web App",
-      "url": "https://youtube.com"
+      "url": "https://youtube.com",
+      "permissions": {
+        "required": ["network.fetch"],
+        "optional": []
+      }
     },
     {
       "id": "github",
@@ -64,7 +84,11 @@
       "author": "GitHub",
       "category": "development",
       "size": "Web App",
-      "url": "https://github.com"
+      "url": "https://github.com",
+      "permissions": {
+        "required": ["network.fetch"],
+        "optional": []
+      }
     },
     {
       "id": "spotify",
@@ -75,7 +99,11 @@
       "author": "Spotify",
       "category": "media",
       "size": "Web App",
-      "url": "https://open.spotify.com"
+      "url": "https://open.spotify.com",
+      "permissions": {
+        "required": ["network.fetch"],
+        "optional": []
+      }
     }
   ]
 }
