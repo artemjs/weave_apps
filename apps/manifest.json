@@ -1,0 +1,70 @@
+{
+  "apps": [
+    {
+      "id": "snake",
+      "name": "Snake",
+      "description": "Classic snake game. Eat food, grow longer, don't hit walls!",
+      "icon": "🐍",
+      "version": "1.0.0",
+      "author": "WeaveOS",
+      "category": "games",
+      "size": "5 KB",
+      "githubPath": "snake/main.swift"
+    },
+    {
+      "id": "clock",
+      "name": "Clock",
+      "description": "World clock with timer and stopwatch",
+      "icon": "⏰",
+      "version": "1.0.0",
+      "author": "WeaveOS",
+      "category": "utilities",
+      "size": "3 KB",
+      "githubPath": "clock/main.swift"
+    },
+    {
+      "id": "notes",
+      "name": "Notes",
+      "description": "Quick notes and todo lists",
+      "icon": "📝",
+      "version": "1.0.0",
+      "author": "WeaveOS",
+      "category": "productivity",
+      "size": "4 KB",
+      "githubPath": "notes/main.swift"
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "description": "Watch videos on YouTube",
+      "icon": "▶️",
+      "version": "1.0.0",
+      "author": "Google",
+      "category": "media",
+      "size": "Web App",
+      "url": "https://youtube.com"
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "description": "Code hosting and collaboration",
+      "icon": "🐙",
+      "version": "1.0.0",
+      "author": "GitHub",
+      "category": "development",
+      "size": "Web App",
+      "url": "https://github.com"
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "description": "Stream music and podcasts",
+      "icon": "🎧",
+      "version": "1.0.0",
+      "author": "Spotify",
+      "category": "media",
+      "size": "Web App",
+      "url": "https://open.spotify.com"
+    }
+  ]
+}
