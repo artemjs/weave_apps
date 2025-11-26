@@ -1,6 +1,21 @@
 {
   "apps": [
     {
+      "id": "tetris",
+      "name": "Tetris",
+      "description": "Classic block stacking game. Rotate and drop pieces to clear lines!",
+      "icon": "🧱",
+      "version": "1.0.0",
+      "author": "WeaveOS",
+      "category": "games",
+      "size": "8 KB",
+      "githubPath": "tetris/main.swift",
+      "permissions": {
+        "required": ["storage.local"],
+        "optional": []
+      }
+    },
+    {
       "id": "clicker",
       "name": "Clicker",
       "description": "Addictive idle clicker game. Click to earn, buy upgrades, watch numbers go up!",
