@@ -1,6 +1,21 @@
 {
   "apps": [
     {
+      "id": "maps",
+      "name": "Maps",
+      "description": "Explore the world with Google Maps. Search places, get directions, and navigate!",
+      "icon": "🗺️",
+      "version": "1.0.0",
+      "author": "WeaveOS",
+      "category": "utilities",
+      "size": "7 KB",
+      "githubPath": "maps/main.swift",
+      "permissions": {
+        "required": ["network.fetch", "geolocation"],
+        "optional": ["storage.local"]
+      }
+    },
+    {
       "id": "tetris",
       "name": "Tetris",
       "description": "Classic block stacking game. Rotate and drop pieces to clear lines!",
