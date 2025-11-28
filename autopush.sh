@@ -27,9 +27,7 @@ start() {
                 git add -A
                 git commit -m "Auto-update $(date '+%Y-%m-%d %H:%M:%S')
 
-🤖 Generated with [Claude Code](https://claude.com/claude-code)
-
-Co-Authored-By: Claude <noreply@anthropic.com>" 2>/dev/null
+Build By WEAVE" 2>/dev/null
 
                 git push 2>/dev/null && echo "[$(date '+%H:%M:%S')] ✅ Pushed!" || echo "[$(date '+%H:%M:%S')] ❌ Push failed"
             fi
