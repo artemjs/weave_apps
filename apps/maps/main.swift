@@ -2,51 +2,56 @@ import WeaveUI
 
 struct MapsApp: App {
   @State var searchQuery: String = ""
-  @State var mapUrl: String = "https://www.openstreetmap.org/export/embed.html?bbox=-122.5,37.7,-122.3,37.85&layer=mapnik"
-  @State var hasLocation: Bool = false
+  @State var lat: Number = 37.7749
+  @State var lon: Number = -122.4194
+  @State var zoom: Number = 13
+
+  func buildUrl() {
+    return "https://www.openstreetmap.org/export/embed.html?bbox=" + (lon-0.05) + "," + (lat-0.05) + "," + (lon+0.05) + "," + (lat+0.05) + "&layer=mapnik&marker=" + lat + "," + lon
+  }
 
   func doSearch() {
-    let encoded = encodeURIComponent(searchQuery)
-    mapUrl = "https://www.openstreetmap.org/export/embed.html?bbox=" + encoded + "&layer=mapnik&marker=true"
+    let query = encodeURIComponent(searchQuery)
+    fetch("https://nominatim.openstreetmap.org/search?format=json&q=" + query).then(function(r) { return r.json() }).then(function(data) {
+      if (data.length > 0) {
+        setLat(parseFloat(data[0].lat))
+        setLon(parseFloat(data[0].lon))
+      }
+    })
   }
 
   func getLocation() {
     navigator.geolocation.getCurrentPosition(function(pos) {
-      let lat = pos.coords.latitude
-      let lon = pos.coords.longitude
-      let bbox = (lon - 0.01) + "," + (lat - 0.01) + "," + (lon + 0.01) + "," + (lat + 0.01)
-      setMapUrl("https://www.openstreetmap.org/export/embed.html?bbox=" + bbox + "&layer=mapnik&marker=" + lat + "," + lon)
-      setHasLocation(true)
+      setLat(pos.coords.latitude)
+      setLon(pos.coords.longitude)
     })
   }
 
   var body: some View {
-    ZStack {
-      WebView(url: mapUrl)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-
-      VStack {
-        HStack(spacing: 8) {
-          TextField("Search places...", text: $searchQuery)
-            .padding(10)
-            .background(Color.white.opacity(0.95))
-            .cornerRadius(12)
-          Button(action: { doSearch() }) {
-            Text("🔍")
-          }
+    VStack(spacing: 0) {
+      HStack(spacing: 8) {
+        TextField("Search places...", text: $searchQuery)
           .padding(10)
-          .background(Color.blue)
-          .cornerRadius(12)
-          Button(action: { getLocation() }) {
-            Text("📍")
-          }
-          .padding(10)
-          .background(Color.green)
-          .cornerRadius(12)
+          .background(Color.white.opacity(0.9))
+          .cornerRadius(10)
+        Button(action: { doSearch() }) {
+          Text("🔍")
         }
-        .padding(12)
-        Spacer()
+        .padding(10)
+        .background(Color.blue)
+        .cornerRadius(10)
+        Button(action: { getLocation() }) {
+          Text("📍")
+        }
+        .padding(10)
+        .background(Color.green)
+        .cornerRadius(10)
       }
+      .padding(10)
+      .background(Color.black.opacity(0.8))
+
+      WebView(url: buildUrl())
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity)
   }
