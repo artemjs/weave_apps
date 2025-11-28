@@ -3,10 +3,10 @@
     {
       "id": "maps",
       "name": "Maps",
-      "description": "Explore the world with Google Maps. Search places, get directions, and navigate!",
+      "description": "Explore the world with OpenStreetMap. Search places and navigate!",
       "icon": "🗺️",
       "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Google_Maps_icon_%282020%29.svg/128px-Google_Maps_icon_%282020%29.svg.png",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": "WeaveOS",
       "category": "utilities",
       "size": "7 KB",
