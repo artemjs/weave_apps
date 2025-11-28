@@ -2,11 +2,11 @@ import WeaveUI
 
 struct MapsApp: App {
   @State var searchQuery: String = ""
-  @State var mapUrl: String = "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d50000!2d-122.4194!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1"
+  @State var mapUrl: String = "https://www.openstreetmap.org/export/embed.html?bbox=-122.5,37.7,-122.3,37.85&layer=mapnik"
 
   func doSearch() {
     let encoded = encodeURIComponent(searchQuery)
-    mapUrl = "https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=" + encoded
+    mapUrl = "https://www.openstreetmap.org/search?query=" + encoded
   }
 
   var body: some View {
