@@ -3,13 +3,13 @@
     {
       "id": "maps",
       "name": "Maps",
-      "description": "Explore the world with OpenStreetMap. Search places and navigate!",
+      "description": "Full-featured map with OSM tiles, satellite view, terrain, search and geolocation!",
       "icon": "🗺️",
       "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Google_Maps_icon_%282020%29.svg/128px-Google_Maps_icon_%282020%29.svg.png",
-      "version": "1.3.0",
+      "version": "2.0.0",
       "author": "WeaveOS",
       "category": "utilities",
-      "size": "7 KB",
+      "size": "12 KB",
       "githubPath": "maps/main.swift",
       "permissions": {
         "required": ["network.fetch", "geolocation"],
